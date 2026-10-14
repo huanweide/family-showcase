@@ -1,0 +1,35 @@
+name: showcase-ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: 数据与结构自检
+        run: node verify.js
+      - name: 页面必须自包含（不得引入任何外部请求）
+        run: |
+          set -e
+          echo "检查外链资源（应为空）..."
+          if grep -nEi 'src=["'"'"']https?://|href=["'"'"']https?://[^"]*\.(css|js)|@import[[:space:]]+url\(|cdn\.|unpkg|jsdelivr|googleapis' index.html; then
+            echo "FAIL: index.html 含外部资源引用，违反自包含承诺"
+            exit 1
+          fi
+          echo "OK: 无外部资源引用，页面自包含"
+      - name: 页面体积（自包含单页应小于 100KB）
+        run: |
+          size=$(wc -c < index.html)
+          echo "index.html = ${size} 字节"
+          if [ "$size" -gt 102400 ]; then
+            echo "FAIL: 单页超过 100KB，可能混入了未压缩产物"
+            exit 1
+          fi
+          echo "OK: 体积在预期范围内"

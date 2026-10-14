@@ -132,11 +132,11 @@
   <header>
     <span class="kick">ENGINEERING HEALTH FAMILY</span>
     <h1>工程健康家族<br/>零依赖体检矩阵全景</h1>
-    <p class="sub">17 个零依赖单文件 CLI，覆盖源码层 / git 层 / 文档层 / 配置层 / 编排层，
+    <p class="sub"><span id="axisCountText">18</span> 个零依赖单文件 CLI，覆盖源码层 / git 层 / 文档层 / 配置层 / 编排层，
        统一「健康分 + CI 门禁」范式。一次命令，一份体检表，一条质量基线。</p>
 
     <div class="stats">
-      <div class="stat"><div class="num" data-to="17">0</div><div class="lab">体检轴</div></div>
+      <div class="stat"><div class="num" data-to="18">0</div><div class="lab">体检轴</div></div>
       <div class="stat"><div class="num" data-to="5">0</div><div class="lab">治理层</div></div>
       <div class="stat"><div class="num" data-to="0">0</div><div class="lab">第三方依赖</div></div>
       <div class="stat"><div class="num" data-to="100">0</div><div class="lab">% 本地可跑</div></div>
@@ -251,6 +251,10 @@ const AXES = [
    rules:["version-tag 不匹配(high)","未打 tag 提交(high)","version 非 semver","changelog 缺版本 等 8 规则"],
    sev:"high/medium/low 加权", langs:["任意(git+json)"],
    run:"npx -y github:huanweide/reldoctor", pub:true, repo:"github.com/huanweide/reldoctor"},
+  {name:"ghadoctor", layer:"git", tag:"GitHub Actions 配置卫生",
+   rules:["unpinned-action(high)","script-injection(high)","broad-permissions(high)","pr-target-checkout(high)","missing-permissions(medium)","hardcoded-secret(medium)","no-timeout(low)","no-concurrency(low)"],
+   sev:"high/medium/low 加权", langs:["GitHub Actions yml/yaml"],
+   run:"npx -y github:huanweide/ghadoctor", pub:true, repo:"github.com/huanweide/ghadoctor"},
 
   {name:"docdoctor", layer:"doc", tag:"Markdown 文档健康",
    rules:["死链接/锚点","超大文档","标题跳级","锚点冲突","图片缺 alt","裸 URL","参考链接缺失"],
@@ -277,6 +281,17 @@ const LAYERS = [
   {k:"orch", label:"编排层"},
 ];
 const LAYER_NAME = {src:"源码层", git:"git 层", doc:"文档层", cfg:"配置层", orch:"编排层"};
+
+// 轴数与分层数一律从 AXES 实算，避免「加了轴却忘了改文案」的数字漂移
+// （历史上就漂过一次：新增 ghadoctor 后页面与 README 仍写 17 轴）。
+(function syncAxisCount(){
+  const el = document.querySelector('.stat .num[data-to]');
+  const stat = document.querySelectorAll('.stat .num');
+  if (stat[0]) stat[0].setAttribute('data-to', String(AXES.length));
+  if (stat[1]) stat[1].setAttribute('data-to', String(LAYERS.length - 1));
+  const txt = document.getElementById('axisCountText');
+  if (txt) txt.textContent = String(AXES.length);
+})();
 
 const grid = document.getElementById("grid");
 const filters = document.getElementById("filters");
