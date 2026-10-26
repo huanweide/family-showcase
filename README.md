@@ -1,3 +1,13 @@
+<!-- badges -->
+[![License](https://img.shields.io/github/license/huanweide/family-showcase)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/huanweide/family-showcase)](https://github.com/huanweide/family-showcase/stargazers)
+[![Engineering Health Family](https://img.shields.io/badge/Engineering%20Health%20Family-18%20axes-22c55e)](https://github.com/huanweide/family-showcase)
+<!-- /badges -->
+
+> **English**: A zero-dependency, self-contained single-page HTML that visualizes the entire Engineering Health Family — every checkup axis, its severity model, run command, and decision routing, filterable by governance layer.
+
+**🔧 This is the [Engineering Health Family](https://github.com/huanweide/family-showcase) front door** (18 zero-dependency checkup axes). Companion hubs: [doctors](https://github.com/huanweide/doctors) (monorepo + `doctors` CLI) and [enghealth](https://github.com/huanweide/enghealth) (one-command unified runner).
+
 # 工程健康家族 · 全景仪表盘（组合叙事 v2）
 
 零依赖、自包含的单页 HTML，把「工程健康家族」全部体检轴端到端呈现：
