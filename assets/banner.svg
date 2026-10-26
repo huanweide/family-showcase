@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="family-showcase">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#0d1830"/>
+      <stop offset="1" stop-color="#070a14"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#58e08a"/>
+      <stop offset="1" stop-color="#6ea8ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="320" fill="url(#bg)"/>
+  <g transform="translate(158,152)" fill="none" stroke="url(#ring)" stroke-width="15" stroke-linecap="round">
+    <rect x="-58" y="-52" width="48" height="44" rx="8"/>
+    <rect x="10" y="-52" width="48" height="44" rx="8"/>
+    <rect x="-58" y="8" width="48" height="44" rx="8"/>
+    <rect x="10" y="8" width="48" height="44" rx="8"/>
+  </g>
+  <text x="300" y="152" fill="#e8eefc" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="80" font-weight="800">Family<tspan fill="#58e08a">Showcase</tspan></text>
+  <text x="304" y="208" fill="#c4d2ee" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="27">工程健康家族 18 轴全景仪表盘 · 零依赖自包含单页 HTML</text>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#aecbff">
+    <rect x="304" y="236" width="240" height="44" rx="22" fill="#6ea8ff1a" stroke="#2f4a7a"/>
+    <text x="322" y="264">18 个零依赖体检轴</text>
+    <rect x="564" y="236" width="200" height="44" rx="22" fill="#6ea8ff1a" stroke="#2f4a7a"/>
+    <text x="582" y="264">按治理层筛选</text>
+    <rect x="784" y="236" width="230" height="44" rx="22" fill="#6ea8ff1a" stroke="#2f4a7a"/>
+    <text x="802" y="264">离线自包含 · 21KB</text>
+  </g>
+</svg>
