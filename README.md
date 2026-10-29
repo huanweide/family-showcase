@@ -187,10 +187,7 @@ VERIFY OK · 18 轴 · 18 个具名条目
 
 ---
 
-## 🔧 赞助支持
-
 如果这个项目帮到了你，欢迎 [点 Star](https://github.com/huanweide/family-showcase) 支持；
-也可微信扫码自愿赞助（收款码见 `sponsor/wechat-qr.png`，作者本人带 Tri 水印的码，
 纯静态图片、不含任何密钥）。
 
 ## 🔧 许可证
@@ -200,7 +197,7 @@ MIT · © huanweide —— 详见 [LICENSE](LICENSE)。
 ---
 
 <div align="center">
-  <b>由 ReTr · 樊斯瑞 维护</b> ·
+  <b>由 ReTr · huanweide 维护</b> ·
   <a href="https://github.com/huanweide">GitHub 主页</a> ·
   <a href="https://github.com/huanweide/doctors">回到代码健康家族总览</a>
 </div>
