@@ -10,7 +10,7 @@
 ![Self-contained](https://img.shields.io/badge/self--contained-21KB%20single%20file-4ecca3)
 ![CI](https://github.com/huanweide/family-showcase/actions/workflows/ci.yml/badge.svg)
 
-> **English** — A zero-dependency, self-contained single-page HTML that visualizes the entire **Engineering Health Family**: all 18 checkup axes, each one's severity model, run command and decision routing, filterable by governance layer. No CDN, no build, no network.
+**English** · [README_EN.md](./README_EN.md)
 
 > **一句话**：一张离线单页，把**工程健康家族**（一组零依赖代码体检工具的集合）的 18 个零依赖体检轴的**全局关系**摆在你面前——哪个维度已覆盖、哪个还空着、某类问题该交给谁。
 
