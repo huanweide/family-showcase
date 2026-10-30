@@ -12,11 +12,11 @@
 
 > **English** — A zero-dependency, self-contained single-page HTML that visualizes the entire **Engineering Health Family**: all 18 checkup axes, each one's severity model, run command and decision routing, filterable by governance layer. No CDN, no build, no network.
 
-> **一句话**：一张离线单页，把「工程健康家族」18 个零依赖体检轴的**全局关系**摆在你面前——哪个维度已覆盖、哪个还空着、某类问题该交给谁。
+> **一句话**：一张离线单页，把**工程健康家族**（一组零依赖代码体检工具的集合）的 18 个零依赖体检轴的**全局关系**摆在你面前——哪个维度已覆盖、哪个还空着、某类问题该交给谁。
 
 **任意浏览器 → 打开一个 HTML → 自动完成「按治理层筛选 → 查看轴的维度/严重度/命令 → 决策分流」**
 
-[30 秒看懂](#-30-秒看懂) · [家族轴清单](#-家族轴清单18) · [特性](#-特性) · [快速开始](#-快速开始) · [自检](#-自检) · [架构](#-架构) · [相关项目](#-相关项目)
+[30 秒看懂](#30-秒看懂) · [家族轴清单](#家族轴清单18) · [特性](#特性) · [快速开始](#快速开始) · [自检](#自检) · [架构](#架构) · [相关项目](#相关项目)
 
 ---
 
@@ -169,7 +169,7 @@ VERIFY OK · 18 轴 · 18 个具名条目
 ## 🔧 归档说明（2026-08-15 变更）
 
 `debugdoctor` 与 `litdoctor` 为本地归档轴，未发布至 GitHub，
-仅存于作者本地 `Desktop/GitHub-PreStorage/当前深耕/`；其余均已发布于
+仅存于本地归档目录（未对外发布）；其余均已发布于
 [github.com/huanweide/\*](https://github.com/huanweide?tab=repositories)。
 
 ---
@@ -179,16 +179,15 @@ VERIFY OK · 18 轴 · 18 个具名条目
 | 项目 | 一句话 |
 |---|---|
 | [`doctors`](https://github.com/huanweide/doctors) | 家族 monorepo：a11y / commit / dev / doc / pkg / rel / repo / type 八件套零依赖单文件 CLI |
-| [`enghealth`](https://github.com/huanweide/enghealth) | 一条命令跑完全家族的统一入口 |
-| [`codehealth-loop`](https://github.com/huanweide/codehealth-loop) | 把 12 个轴接进「四道刹车」自愈闭环的 Python 引擎 |
-| [`veriloop`](https://github.com/huanweide/veriloop) | 同范式的代码审计 CLI：12 个可插拔分析轴 + 4 道验证刹车 |
-| [`maxloop-overlord`](https://github.com/huanweide/maxloop-overlord) | 刹车范式本体：外部判据刹车、杜绝假绿空转 |
+| [`enghealth`](https://github.com/huanweide/enghealth) | 一条命令跑完全家族的统一入口（已并入 doctors） |
+| [`codehealth-loop`](https://github.com/huanweide/codehealth-loop) | Python 编排引擎：把多个体检轴接进 CI 门禁，自动拦下不达标提交 |
+| [`veriloop`](https://github.com/huanweide/veriloop) | 同范式的代码审计 CLI：多个可插拔分析轴 + 多道验证门禁 |
+| [`maxloop-overlord`](https://github.com/huanweide/maxloop-overlord) | 门禁范式本体：在 CI 中设外部判据门禁，杜绝“假绿”空转 |
 | [`ghadoctor`](https://github.com/huanweide/ghadoctor) | git 层第 4 轴：GitHub Actions 配置卫生 |
 
 ---
 
-如果这个项目帮到了你，欢迎 [点 Star](https://github.com/huanweide/family-showcase) 支持；
-纯静态图片、不含任何密钥）。
+如果这个项目帮到了你，欢迎 [点 Star](https://github.com/huanweide/family-showcase) 支持。
 
 ## 🔧 许可证
 
@@ -197,7 +196,7 @@ MIT · © huanweide —— 详见 [LICENSE](LICENSE)。
 ---
 
 <div align="center">
-  <b>由 ReTr · huanweide 维护</b> ·
+  <b>由 huanweide 维护</b> ·
   <a href="https://github.com/huanweide">GitHub 主页</a> ·
   <a href="https://github.com/huanweide/doctors">回到代码健康家族总览</a>
 </div>
